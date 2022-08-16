@@ -1,0 +1,122 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+@font-face {
+	font-family: 'Golos';
+	src: url('fonts/Golos-Text_Regular.eot');
+	src: local('☺'), url('fonts/Golos-Text_Regular.woff') format('woff'), url('fonts/Golos-Text_Regular.ttf') format('truetype'), url('fonts/Golos-Text_Regular.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+
+
+@font-face {
+  font-family: 'Golos';
+  src: url('fonts/Golos-Text_Medium.eot');
+  src: local('☺'), url('fonts/Golos-Text_Medium.woff') format('woff'),
+    url('fonts/Golos-Text_Medium.ttf') format('truetype'),
+    url('fonts/Golos-Text_Medium.svg') format('svg');
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Golos';
+  src: url('fonts/Golos-Text_DemiBold.eot');
+  src: local('☺'), url('fonts/Golos-Text_DemiBold.woff') format('woff'),
+    url('fonts/Golos-Text_DemiBold.ttf') format('truetype'),
+    url('fonts/Golos-Text_DemiBold.svg') format('svg');
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Golos';
+  src: url('fonts/Golos-Text_Bold.eot');
+  src: local('☺'), url('fonts/Golos-Text_Bold.woff') format('woff'),
+    url('fonts/Golos-Text_Bold.ttf') format('truetype'),
+    url('fonts/Golos-Text_Bold.svg') format('svg');
+  font-weight: 700;
+  font-style: normal;
+}
+
+body {
+  font-family: 'Golos';
+  font-weight: normal;
+}
+
+h2 {
+  font-weight: 400;
+}
+
+.profession__title {
+  -webkit-text-stroke: 1px #000000;
+}
+
+.skills__row {
+  display: flex;
+  gap: 50px;
+  font-size: 22px;
+  flex-wrap: wrap;
+  justify-content: center;
+  text-align: center;
+}
+
+.skills__secondrow {
+  display: none;
+}
+.skills__item {
+  opacity: 0;
+  top: 100%;
+  flex: 1 0 30%;
+  transform: translateY(100%);
+  & img {
+    margin: 0 auto;
+    margin-bottom: 30px;
+  }
+
+}
+
+@media (max-width: 320px) {
+  .skills__row{
+    flex-direction: column;
+    gap:20px;
+  }
+  .skills__item{
+    & img{
+      transform: scale(0.7);
+      margin-bottom: 0px;
+    }
+  }
+}
+.profession__circle{
+  position: relative;
+  margin-right: 10px;
+  bottom: -2.5rem;
+  left:2.5rem;
+  width: 340px;
+  height: 340px;
+  background: #746BF4;
+  border-radius: 50%;
+  flex-shrink:0;
+}
+
+.profession__numbers__item {
+  display: flex;
+  gap:16px;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+  &:before{
+    content: '';
+    background-color: #E0E6E9;
+    padding: 5px;
+    border-radius: 50%;
+  }
+}
+
+
+
